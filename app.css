@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --success-color: #2ad471;
+    --error-color: #e95a18;
+}
+
+* {
+    /* This prevents the padding to affect the width */
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #f9fafb;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.container {
+    background-color: white;
+    border: solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 2.5px 9px rgba(128, 120, 120, 0.3);
+    width: 400px;
+}
+
+#form {
+    padding: 30px 40px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 1.5em;
+} 
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control > label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control > input {
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    display: block;
+    padding: 7px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.form-control > input:focus {
+    outline: 0;
+    border-color: #87b4d8;
+}
+
+.form-control.success > input {
+    border-color: var(--success-color);
+}
+
+.form-control.error > input {
+    border-color: var(--error-color);
+}
+
+.form-control  > small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error > small {
+    visibility: visible; 
+}
+
+#form > .form-button {
+    margin-top: 8.5%;
+    padding: 5px 13px;
+    background-color: #3498db;
+    border-radius: 6px;
+    border-color: #3498db;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 16px;
+    width: 100%;
+}
+
+#form > .form-button:focus {
+    outline: 0;
+    cursor: pointer;
+}
+
